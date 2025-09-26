@@ -172,3 +172,12 @@
     transform: translateX(1px);
   }
 }
+
+.isCompleted {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.isCompleted:hover {
+  background-color: transparent;
+}
