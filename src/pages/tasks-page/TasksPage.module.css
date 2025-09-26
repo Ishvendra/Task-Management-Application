@@ -1,0 +1,43 @@
+.appContainer {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-background-app);
+}
+
+.mainContent {
+  display: block;
+  padding: 1rem;
+}
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-background-app);
+  text-decoration: none;
+  border: none;
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fab:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-sm);
+}

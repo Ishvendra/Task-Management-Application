@@ -1,0 +1,68 @@
+.taskListSection {
+  border-radius: var(--border-radius-md);
+  margin-bottom: 14px;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--color-background-column);
+  padding: 10px 14px;
+  border-radius: 3px;
+}
+
+.accordionHeader h2 {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.chevron {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.itemLength {
+  font-weight: 700;
+}
+
+.chevron.isOpen {
+  transform: rotate(180deg);
+}
+
+.taskListWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.taskListWrapper.isOpen {
+  max-height: 1000px;
+}
+
+.taskList {
+  list-style: none;
+  padding: 1rem 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyState {
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-background-empty-list);
+}
+
+.emptyState p {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-text-muted);
+}

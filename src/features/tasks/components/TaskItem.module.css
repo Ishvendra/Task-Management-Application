@@ -1,0 +1,168 @@
+.taskItemWrapper {
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.taskItemWrapper:hover {
+  background-color: var(--color-background-hover);
+  border-radius: var(--border-radius-md);
+  border-color: transparent;
+}
+
+.taskItem {
+  transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-primary);
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  text-transform: capitalize;
+}
+
+.descriptionWrapper {
+  margin-left: 44px;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+.dueDate {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-text-primary);
+  font-size: 12px;
+  width: -webkit-fill-available;
+  justify-content: end;
+}
+
+.status {
+  height: 10px;
+  width: 10px;
+  border-radius: var(--border-radius-xl);
+}
+
+.statusPending {
+  background-color: var(--color-status-pending);
+}
+.statusInProgress {
+  background-color: var(--color-status-in-progress);
+}
+.statusCompleted {
+  background-color: var(--color-status-completed);
+}
+.iconWrapper {
+  display: flex;
+  gap: 5.12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.taskItemWrapper:hover .iconWrapper {
+  opacity: 1;
+  visibility: visible;
+}
+
+.taskItemWrapper:hover .iconWrapper,
+.iconWrapper.iconsVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-xs);
+}
+
+.iconButton:hover {
+  background-color: var(--color-border);
+}
+
+.iconButton svg {
+  width: 16px;
+  height: 16px;
+  transition: stroke 0.2s ease;
+}
+
+.deleteButton {
+  color: var(--color-error);
+}
+
+.deleteButton:hover {
+  color: var(--color-error);
+  background-color: var(--color-border);
+}
+
+.deleteConfirm {
+  color: var(--color-background-app);
+  background-color: var(--color-error) !important;
+}
+
+.deleteConfirm svg {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  20%,
+  60% {
+    transform: translateX(-1px);
+  }
+  40%,
+  80% {
+    transform: translateX(1px);
+  }
+}

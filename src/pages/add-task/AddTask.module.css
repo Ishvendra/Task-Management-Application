@@ -1,0 +1,85 @@
+.addTaskContainer {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formContainer {
+  padding: 3rem 1.5rem;
+}
+
+.form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-placeholder);
+  opacity: 1;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buttons {
+  font-size: 14px;
+  padding: 10px 0px;
+  width: 110px;
+  font-family: var(--font-primary);
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-primary);
+}
+.cancelButton:hover {
+  background-color: var(--color-border);
+}
+.addButton {
+  background-color: var(--color-primary);
+  color: var(--color-background-app);
+}
+.addButton:hover {
+  background-color: var(--color-primary-dark);
+}

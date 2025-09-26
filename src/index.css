@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-primary: 'Jost', sans-serif;
+  --font-secondary: 'Lato', sans-serif;
+
+  --color-primary: #034ea2;
+  --color-primary-dark: #083160;
+  --color-primary-white: #ffffff;
+
+  --color-text-primary: #231f20;
+  --color-text-muted: #767676;
+  --color-text-placeholder: #66676b;
+
+  --color-background-app: #ffffff;
+  --color-background-empty-list: #f4f9fe54;
+  --color-background-column: #f3f6f9;
+  --color-background-hover: #f7f7f7;
+
+  --color-status-pending: #d0d0d0;
+  --color-status-in-progress: #ffb03c;
+  --color-status-completed: #368a04;
+
+  --color-border: #dddddd;
+  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.5);
+  --border-radius-xs: 4px;
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-xl: 16px;
+  --color-error: #e32a34;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background-app);
+}
