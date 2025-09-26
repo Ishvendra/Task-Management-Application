@@ -49,13 +49,16 @@ const TaskItem = ({ task }: TaskItemProps) => {
     <li className={styles.taskItemWrapper}>
       <div className={styles.taskItem}>
         <div className={styles.header}>
-          <div className={styles.avatar}>{initial}</div>
-          <h3
-            className={styles.title}
-            title={isTitleTruncated ? task.title : undefined}
-          >
-            {truncateText(task.title, 50)}
-          </h3>
+          <div className={styles.titleContainer}>
+            <div className={styles.avatar}>{initial}</div>
+            <h3
+              className={styles.title}
+              title={isTitleTruncated ? task.title : undefined}
+            >
+              {/* {truncateText(task.title, 50)} */}
+              {task.title}
+            </h3>
+          </div>
           <span className={styles.statusWrapper}>
             <span
               className={`${styles.status} ${statusClasses[task.status]}`}

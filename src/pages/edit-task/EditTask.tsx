@@ -6,6 +6,7 @@ import Header from '../../components/header/Header';
 import toast from 'react-hot-toast';
 import CustomStatusSelect from '../../features/tasks/components/CustomStatusSelect';
 import styles from '../add-task/AddTask.module.css';
+import { DESC_MAX_LENGTH, TITLE_MAX_LENGTH } from '../add-task/AddTask';
 
 const EditTask = () => {
   const { taskId } = useParams<{ taskId: string }>();
@@ -74,25 +75,35 @@ const EditTask = () => {
           <div>Loading Task...</div>
         ) : (
           <form onSubmit={handleSubmit} className={styles.form}>
-            <input
-              name='title'
-              type='text'
-              value={currentTask.title}
-              placeholder='Enter the title'
-              onChange={handleInputChange}
-              className={styles.input}
-              maxLength={80}
-            />
-            <textarea
-              ref={textareaRef}
-              name='description'
-              value={currentTask.description}
-              placeholder='Enter the description'
-              onInput={handleTextareaInput}
-              onChange={handleInputChange}
-              className={styles.textarea}
-              maxLength={500}
-            />
+            <div>
+              <input
+                name='title'
+                type='text'
+                value={currentTask.title}
+                placeholder='Enter the title'
+                onChange={handleInputChange}
+                className={styles.input}
+                maxLength={80}
+              />
+              <p className={styles.charCounter}>
+                {currentTask.title.length} / {TITLE_MAX_LENGTH}
+              </p>
+            </div>
+            <div>
+              <textarea
+                ref={textareaRef}
+                name='description'
+                value={currentTask.description}
+                placeholder='Enter the description'
+                onInput={handleTextareaInput}
+                onChange={handleInputChange}
+                className={styles.textarea}
+                maxLength={500}
+              />
+              <p className={styles.charCounter}>
+                {currentTask.description.length} / {DESC_MAX_LENGTH}
+              </p>
+            </div>
             <CustomStatusSelect
               value={currentTask.status}
               onChange={handleStatusChange}

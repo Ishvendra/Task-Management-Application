@@ -83,3 +83,10 @@
 .addButton:hover {
   background-color: var(--color-primary-dark);
 }
+
+.charCounter {
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin: 0rem 0rem 0 0;
+}
