@@ -10,6 +10,32 @@ A modern, responsive task management application built with React and TypeScript
 
 ![App Demo GIF](./public/tresata.gif)
 
+#### 🏃‍♂️ Running the Project Locally
+
+To run this project on your local machine, follow these steps:
+
+1. Clone the repository
+
+```
+git clone https://github.com/Ishvendra/Task-Management-Application.git
+
+cd Task-Management-Application
+```
+
+2. Install dependencies
+
+```
+npm install
+```
+
+3. Run the development server
+
+```
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`.
+
 ### ✅ Features
 
 #### Core Features
@@ -87,29 +113,3 @@ State is managed globally using a combination of `useReducer` and `useContext`. 
 - `useDebounce`: Efficiently debounces the search input to prevent excessive re-renders while the user is typing.
 
 - `useOnClickOutside`: A reusable hook to handle clicks outside of a specific element, used for closing popovers and interactive elements.
-
-#### 🏃‍♂️ Running the Project Locally
-
-To run this project on your local machine, follow these steps:
-
-1. Clone the repository
-
-```
-git clone https://github.com/Ishvendra/Task-Management-Application.git
-
-cd Task-Management-Application
-```
-
-2. Install dependencies
-
-```
-npm install
-```
-
-3. Run the development server
-
-```
-npm run dev
-```
-
-The application will be available at `http://localhost:5173`.
